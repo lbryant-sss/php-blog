@@ -6,10 +6,10 @@
     <div class="container-fluid">
         <div>
             <h2>
-                <?php echo $row["title"] ?>
+                <?php echo htmlspecialchars($blogs["title"]) ?>
             </h2>
             <p>
-                <?php echo $row["content"] ?>
+                <?php echo htmlspecialchars($blogs["content"]) ?>
             </p>
         </div>
         <a href="edit.php" class="btn btn-primary">Edit</a>
