@@ -1,11 +1,11 @@
 <?php include("header.php") ?>
 <?php include("db-config.php") ?>
-
+<br>
 <div class="container text-center">
   <div class="row">
     <div class="col">
     <?php foreach($blogs as $blog): ?>
-        <div class="card col-sm-4" style="width: 28rem;">
+        <div class="container card col-sm-4" style="width: 28rem;">
             <div class="card-body">
                 <h5 class="card-title">
                 <?php echo $blog["title"] ?>
@@ -20,9 +20,8 @@
                     echo $preview . "...";
                 ?>
                 </p>
-                    <a href="detail.php" class="btn btn-primary">Read the blog</a>
-                <a href="edit.php" class="btn btn-primary">Edit</a>
-                <a href="#" class="btn btn-primary">Edit</a>
+                    <a href="detail.php?id=<?php echo $blog['id']; ?>" class="btn btn-primary">Read the blog</a>
+                <a href="edit.php?id=<?php echo $blog['id']; ?>" class="btn btn-primary">Edit</a>
             </div>
         </div> <br />
 <?php endforeach; ?>
