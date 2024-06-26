@@ -7,12 +7,11 @@
     if($conn->connect_error){
         echo "Error " . $conn->connect_error;
     }else {
-        $sql = "SELECT * FROM blogs;";
+        $sql = "SELECT * FROM blogs ORDER BY time_created;";
         $result = mysqli_query($conn, $sql);
-    }
+        $blogs = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    $row = mysqli_fetch_assoc($result);
-    mysqli_free_result($result);
-    $conn->close();
+        mysqli_free_result($result);
+    }
 ?>
 
