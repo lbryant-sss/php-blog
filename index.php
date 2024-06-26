@@ -21,7 +21,7 @@
                 ?>
                 </p>
                     <a href="detail.php?id=<?php echo $blog['id']; ?>" class="btn btn-primary">Read the blog</a>
-                <a href="edit.php?id=<?php echo $blog['id']; ?>" class="btn btn-primary">Edit</a>
+                    <a href="edit-blog.php?id=<?php echo $blog['id']; ?>" class="btn btn-primary">Edit</a>
             </div>
         </div> <br />
 <?php endforeach; ?>

@@ -1,6 +1,6 @@
 <?php include("header.php") ?>
 <?php include("db-config.php") ?>
-
+//This page is to create a new blog post
 <?php
 
     //initialize the fields

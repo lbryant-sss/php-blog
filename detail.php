@@ -18,6 +18,10 @@
         $blog = mysqli_fetch_assoc($blog_result);
 
     }
+
+
+
+
     if(isset($_POST['delete'])){
         $id = mysqli_real_escape_string($conn, $_POST['id_to_delete']);
         $sql = "DELETE FROM blogs WHERE id = $id";
@@ -47,11 +51,12 @@
                 <?php echo htmlspecialchars($blog["content"]) ?>
             </p>
         </div>
-        <a href="edit.php?id=<?php echo $blog['id']; ?>" class="btn btn-primary">Edit</a>
+
+        <a href="edit-blog.php?id=<?php echo $blog['id']; ?>" class="btn btn-primary">Edit</a>
+        
         <form method="POST" action="detail.php">
             <input type="hidden" name="id_to_delete" value="<?php echo $blog['id'] ?>"> <br>
             <input type="submit" name="delete" class="btn btn-primary" value="Delete">
-
         </form>
     </div>
     <?php else: ?>
